@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Stopwatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3kD-NS-pVm">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Stopwatch" id="gY3-5O-mOJ">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="pause" id="5MA-Pc-GA4">
+                                            <connections>
+                                                <action selector="pause:" destination="vXZ-lx-hvc" id="odY-SU-tva"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="QXw-X1-ZC7">
+                                            <connections>
+                                                <action selector="play:" destination="vXZ-lx-hvc" id="XqJ-Hf-rbt"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r21-wl-qbH">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="stop" id="V1I-Ib-TRb">
+                                        <connections>
+                                            <action selector="stop:" destination="vXZ-lx-hvc" id="akP-xn-bql"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="BPu-DE-oxe"/>
+                                    <barButtonItem systemItem="refresh" id="Gxd-TX-wcC">
+                                        <connections>
+                                            <action selector="restart:" destination="vXZ-lx-hvc" id="cTo-zk-YFZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyx-7Z-mSD">
+                                <rect key="frame" x="107" y="204" width="107" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="RK0-qP-IGo"/>
+                                    <constraint firstAttribute="width" constant="107" id="krc-RJ-oz4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="83"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="uyx-7Z-mSD" secondAttribute="centerX" id="9uZ-0s-1ai"/>
+                            <constraint firstItem="r21-wl-qbH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="QBK-cN-jEI"/>
+                            <constraint firstAttribute="centerY" secondItem="uyx-7Z-mSD" secondAttribute="centerY" id="Qgf-se-0ix"/>
+                            <constraint firstItem="3kD-NS-pVm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="Rwe-cm-umQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3kD-NS-pVm" secondAttribute="trailing" constant="-16" id="TNQ-87-owK"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="r21-wl-qbH" secondAttribute="bottom" id="mJs-kk-l4T"/>
+                            <constraint firstItem="3kD-NS-pVm" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="ukE-6S-Ivh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r21-wl-qbH" secondAttribute="trailing" constant="-16" id="xoA-Jp-z5r"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="time" destination="uyx-7Z-mSD" id="4g3-eR-cCv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
